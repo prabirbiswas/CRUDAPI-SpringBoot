@@ -47,5 +47,6 @@ public class ProductService {
         Product existingProduct = repository.findById(product.getId()).orElse(null);
         existingProduct.setName(product.getName());
         return repository.save(existingProduct);
+
     }
 }
