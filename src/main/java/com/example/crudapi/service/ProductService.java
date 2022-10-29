@@ -43,4 +43,9 @@ public class ProductService {
         existingProduct.setPrice(product.getPrice());
         return repository.save(existingProduct);
     }
+    public Product updateProductName(Product product) {
+        Product existingProduct = repository.findById(product.getId()).orElse(null);
+        existingProduct.setName(product.getName());
+        return repository.save(existingProduct);
+    }
 }
